@@ -1,0 +1,24 @@
+// modul.js
+
+export function fahrenheitToCelcius(fahrenheit) {
+  // Fungsi untuk mengkonversi suhu dari Fahrenheit ke Celcius
+  const celcius = (fahrenheit - 32) * 5 / 9;
+  return `${fahrenheit.toFixed(2)} Fahrenheit = ${celcius.toFixed(2)} Celcius`;
+}
+
+export default function calculateBMI(berat, tinggi) {
+  // Fungsi untuk menghitung BMI (Body Mass Index) dan menampilkan kategori BMI
+  const bmi = berat / (tinggi * tinggi);
+  let kategori;
+  if (bmi < 18.5) {
+    kategori = "Berat badan kurang";
+  } else if (bmi < 25) {
+    kategori = "Normal (ideal)";
+  } else if (bmi < 30) {
+    kategori = "Kelebihan berat badan";
+  } else {
+    kategori = "Obesitas";
+  }
+  return `BMI anda adalah ${bmi.toFixed(2)}. Kategori BMI anda adalah ${kategori}`;
+}
+
